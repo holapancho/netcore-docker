@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  anothernetcoredocker:
+    image: ${DOCKER_REGISTRY-}anothernetcoredocker
+    build:
+      context: .
+      dockerfile: AnotherNetCoreDocker/Dockerfile
+    ports:
+      - 1313:80
+
+  netcoredocker:
+    image: ${DOCKER_REGISTRY-}netcoredocker
+    build:
+      context: .
+      dockerfile: NetCoreDocker/Dockerfile
+    ports:
+      - 1314:80
+

@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  anothernetcoredocker:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+
+  netcoredocker:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
